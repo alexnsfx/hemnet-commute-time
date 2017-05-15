@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Hemnet commute time",
+  "version": "0.2",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*.hemnet.se/*"],
+    "js": ["content.js"]
+  }],
+  "browser_action": {
+    "default_title": "Hemnet commute time"
+  },
+
+  "permissions": [
+    "activeTab",
+	"webNavigation",
+    "https://maps.googleapis.com/"
+  ]
+}
