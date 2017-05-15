@@ -128,7 +128,7 @@ function displayError(errorMessage, domElement, transit, end_address) {
 }
 
 chrome.runtime.onMessage.addListener(function (msg, sender) {
-    if (msg.text === 'display_commute') {
+	if (msg.text === 'display_commute') {
 		var city = "Stockholms län";
 		var street = "";
 		var items;
@@ -190,8 +190,8 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 			});
 		}
 
-        return true;
-    }
+		return true;
+	}
 	
 	return false;
 });
